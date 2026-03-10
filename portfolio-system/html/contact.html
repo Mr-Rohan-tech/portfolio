@@ -1,0 +1,206 @@
+<!--
+  ============================================================================
+  CYBERSECURITY PORTFOLIO - CONTACT PAGE
+  ============================================================================
+  
+  This page provides contact information for Rohan Kumar and includes
+  a contact form for visitors to get in touch.
+  
+  ============================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Rohan Kumar for cybersecurity services, collaborations, or inquiries.">
+  <title>Contact | Rohan Kumar - Cybersecurity Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <span>Rohan</span>Kumar
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="skills.html" class="nav-link">Skills</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="tools.html" class="nav-link">Tools</a></li>
+        <li><a href="writeups.html" class="nav-link">Writeups</a></li>
+        <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+        <li><a href="education.html" class="nav-link">Education</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+      
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Hero Section -->
+  <section class="hero" style="min-height: 50vh; padding-top: 120px;">
+    <div class="hero-content">
+      <h1>Get In <span class="highlight">Touch</span></h1>
+      <p class="hero-description">
+        Let's discuss your security needs
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <p>
+            Whether you have a project in mind, want to collaborate, or just want to connect, 
+            feel free to reach out. I'm always open to discussing new opportunities and challenges.
+          </p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <p>rohan.kumar@email.com</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Phone</h4>
+                <p>+91 98765 43210</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Location</h4>
+                <p>Mumbai, India</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Availability</h4>
+                <p>Monday - Friday, 9:00 AM - 6:00 PM IST</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-social">
+            <h4>Follow Me</h4>
+            <div class="social-links">
+              <a href="https://linkedin.com/in/rohankumar" class="social-link" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/rohankumar" class="social-link" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://twitter.com/rohankumar" class="social-link" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://discord.gg/rohankumar" class="social-link" target="_blank">
+                <i class="fab fa-discord"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h3 style="margin-bottom: 25px;">Send a Message</h3>
+          
+          <!-- Form Message Container -->
+          <div id="formMessage" style="display: none; padding: 15px; border-radius: 8px; margin-bottom: 20px;"></div>
+          
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+          
+          <p style="text-align: center; margin-top: 20px; font-size: 0.85rem; color: var(--text-muted);">
+            <i class="fas fa-reply"></i> Usually respond within 24 hours
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span>Rohan</span>Kumar
+        </div>
+        <p class="footer-text">
+          &copy; 2024 Rohan Kumar. All rights reserved.
+        </p>
+        <div class="footer-links">
+          <a href="contact.html" class="footer-link">Contact</a>
+          <a href="../admin/login.html" class="footer-link">Admin</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

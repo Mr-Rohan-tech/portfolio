@@ -1,0 +1,118 @@
+<!--
+  ============================================================================
+  CYBERSECURITY PORTFOLIO - ADMIN LOGIN PAGE
+  ============================================================================
+  
+  This is the login page for the admin dashboard. Only authenticated users
+  can access the dashboard to edit portfolio content.
+  
+  Default Credentials:
+  - Username: admin
+  - Password: admin123
+  
+  ============================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Admin Login - Rohan Kumar Cybersecurity Portfolio">
+  <title>Admin Login | Rohan Kumar - Cybersecurity Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Admin Stylesheet -->
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <!-- Login Container -->
+  <div class="login-container">
+    <!-- Login Card -->
+    <div class="login-card">
+      <!-- Login Header -->
+      <div class="login-header">
+        <div class="login-logo">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h1>Admin Login</h1>
+        <p>Sign in to manage your portfolio</p>
+      </div>
+      
+      <!-- Error Message Container -->
+      <div id="loginError" class="login-error">
+        <i class="fas fa-exclamation-circle"></i>
+        <span>Error message</span>
+      </div>
+      
+      <!-- Login Form -->
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label for="username">
+            <i class="fas fa-user"></i> Username
+          </label>
+          <input 
+            type="text" 
+            id="username" 
+            name="username" 
+            placeholder="Enter your username"
+            autocomplete="username"
+            required
+          >
+        </div>
+        
+        <div class="form-group">
+          <label for="password">
+            <i class="fas fa-lock"></i> Password
+          </label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            required
+          >
+        </div>
+        
+        <button type="submit" class="login-btn">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+      </form>
+      
+      <!-- Login Footer -->
+      <div class="login-footer">
+        <p>
+          <i class="fas fa-info-circle"></i> 
+          Default: admin / admin123
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Back to Portfolio Link -->
+  <a href="../index.html" style="position: fixed; bottom: 30px; left: 30px; color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 10px; transition: color 0.3s;">
+    <i class="fas fa-arrow-left"></i>
+    <span>Back to Portfolio</span>
+  </a>
+
+  <!-- Authentication JavaScript -->
+  <script src="../js/auth.js"></script>
+  
+  <!-- Inline script for additional login functionality -->
+  <script>
+    // Check if already logged in and redirect to dashboard
+    document.addEventListener('DOMContentLoaded', function() {
+      if (isAuthenticated()) {
+        window.location.href = 'dashboard.html';
+      }
+    });
+  </script>
+</body>
+</html>
