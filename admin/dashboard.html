@@ -1,0 +1,243 @@
+<!--
+  ============================================================================
+  CYBERSECURITY PORTFOLIO - ADMIN DASHBOARD
+  ============================================================================
+  
+  This is the main dashboard page for the admin panel. It provides an overview
+  of portfolio statistics, recent activity, and quick access to edit sections.
+  
+  Authentication is required to access this page.
+  
+  ============================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Admin Dashboard - Rohan Kumar Cybersecurity Portfolio">
+  <title>Dashboard | Admin - Rohan Kumar</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Admin Stylesheet -->
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <!-- Admin Wrapper -->
+  <div class="admin-wrapper">
+    
+    <!-- ==========================================================================
+         SIDEBAR NAVIGATION
+         ========================================================================== -->
+    <aside class="sidebar">
+      <!-- Sidebar Header -->
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="sidebar-brand">
+          <h2>Admin Panel</h2>
+          <span>Portfolio Manager</span>
+        </div>
+        <button class="sidebar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      
+      <!-- Sidebar Navigation -->
+      <nav class="sidebar-nav">
+        <!-- Main Section -->
+        <div class="nav-section">
+          <p class="nav-section-title">Main</p>
+          <a href="dashboard.html" class="nav-item active">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </div>
+        
+        <!-- Edit Section -->
+        <div class="nav-section">
+          <p class="nav-section-title">Edit Content</p>
+          <a href="edit-about.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Edit About</span>
+          </a>
+          <a href="edit-services.html" class="nav-item">
+            <i class="fas fa-briefcase"></i>
+            <span>Edit Services</span>
+          </a>
+          <a href="edit-skills.html" class="nav-item">
+            <i class="fas fa-code"></i>
+            <span>Edit Skills</span>
+          </a>
+          <a href="edit-projects.html" class="nav-item">
+            <i class="fas fa-project-diagram"></i>
+            <span>Edit Projects</span>
+          </a>
+          <a href="edit-tools.html" class="nav-item">
+            <i class="fas fa-tools"></i>
+            <span>Edit Tools</span>
+          </a>
+          <a href="edit-education.html" class="nav-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Edit Education</span>
+          </a>
+          <a href="edit-certifications.html" class="nav-item">
+            <i class="fas fa-certificate"></i>
+            <span>Edit Certifications</span>
+          </a>
+          <a href="edit-contact.html" class="nav-item">
+            <i class="fas fa-address-card"></i>
+            <span>Edit Contact</span>
+          </a>
+        </div>
+      </nav>
+      
+      <!-- Sidebar Footer -->
+      <div class="sidebar-footer">
+        <button class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ==========================================================================
+         MAIN CONTENT AREA
+         ========================================================================== -->
+    <main class="main-content">
+      
+      <!-- Top Header -->
+      <header class="top-header">
+        <div class="page-title">
+          <h1>Dashboard</h1>
+          <p>Welcome back, <span class="user-name">Admin</span>!</p>
+        </div>
+        <div class="header-actions">
+          <div class="user-profile">
+            <div class="user-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="user-info">
+              <p class="user-name">Admin</p>
+              <p class="user-role">Portfolio Owner</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content Area -->
+      <div class="content">
+        
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon green">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="stat-projects">0</h3>
+              <p>Projects</p>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon blue">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="stat-skills">0</h3>
+              <p>Skills</p>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon orange">
+              <i class="fas fa-tools"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="stat-tools">0</h3>
+              <p>Tools</p>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon purple">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="stat-certifications">0</h3>
+              <p>Certifications</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+          
+          <!-- Recent Activity -->
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <h3><i class="fas fa-history"></i> Recent Activity</h3>
+            </div>
+            <div class="dashboard-card-body">
+              <div class="activity-list" id="activityList">
+                <p class="text-muted">No recent activity</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Quick Actions -->
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+            </div>
+            <div class="dashboard-card-body">
+              <div class="quick-actions">
+                <a href="edit-projects.html" class="quick-action">
+                  <i class="fas fa-plus"></i>
+                  <span>Add Project</span>
+                </a>
+                <a href="edit-skills.html" class="quick-action">
+                  <i class="fas fa-plus"></i>
+                  <span>Add Skill</span>
+                </a>
+                <a href="edit-certifications.html" class="quick-action">
+                  <i class="fas fa-plus"></i>
+                  <span>Add Certificate</span>
+                </a>
+                <a href="../index.html" class="quick-action" target="_blank">
+                  <i class="fas fa-eye"></i>
+                  <span>View Site</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Last Modified Info -->
+        <div style="margin-top: 30px; padding: 20px; background: var(--admin-card); border-radius: 8px; border: 1px solid var(--admin-border);">
+          <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">
+            <i class="fas fa-info-circle"></i>
+            Last updated: <span id="lastModified">Never</span>
+          </p>
+        </div>
+        
+      </div>
+    </main>
+  </div>
+
+  <!-- Authentication JavaScript -->
+  <script src="../js/auth.js"></script>
+  
+  <!-- Admin JavaScript -->
+  <script src="../js/admin.js"></script>
+</body>
+</html>
