@@ -82,8 +82,8 @@ portfolio-system/
 ## Default Admin Credentials
 
 ```
-Username: admin
-Password: admin123
+Username: Admin123
+Password: **********
 ```
 
 **Note:** For production use, change these credentials in the `js/auth.js` file.
@@ -227,7 +227,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## Support
 
 For questions or issues, please contact:
-- Email: rohan.kumar@email.com
+- Email: rohanden786@gmail.com
 - LinkedIn: https://linkedin.com/in/rohankumar
 
 ---
